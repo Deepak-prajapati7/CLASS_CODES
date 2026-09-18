@@ -105,3 +105,4 @@ const getUserById = function (req, res) {
 };
 
 export { getusers ,createuser, updateuser, deleteuser, getUserById};
+
