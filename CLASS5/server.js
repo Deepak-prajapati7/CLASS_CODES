@@ -9,17 +9,17 @@ app.use(express.json())
 
 app.post('/user/:id', (req,res)=>{
 
-    console.log(req.url)
+    console.log(req.url)          //to get the url
 
-    console.log(req.method)
+    console.log(req.method)      //to get the method
 
-    console.log(req.body)
+    console.log(req.body)       //to get the body
 
-    console.log(req.params)
+    console.log(req.params)     //to get the params
 
-    console.log(req.query)
+    console.log(req.query)     //to get the query params
 
-    console.log(req.headers)
+    console.log(req.headers)   // to get the headers
 
 
 
