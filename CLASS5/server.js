@@ -48,24 +48,3 @@ app.listen(port, ()=>{
 
 
 
-app.get('/user/:id', (req,res)=>{
-
-    console.log(req.url) // to get the url of the request
-
-    console.log(req.method) // to get the method of the request
-
-    console.log(req.params)  // to get the params of the request
-
-    console.log(req.query)   // to get the query of the request
-
-    console.log(req.headers) // to get the headers of the request
-
-    res.status(200)     // to set the status code of the response
-
-    res.send('this is get user logic')      // to send the response to the client
-
-    // res.json({
-    //     message:"this is get user logic...."
-    // })
-
-})  
