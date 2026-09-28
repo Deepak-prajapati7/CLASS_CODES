@@ -1,6 +1,10 @@
 import express from "express";
 import morgan from "morgan";
+import cors from "cors"; // allow backend to access frontend data from different origin
 const app = express();
+app.use(cors(
+  //origin: "http://localhost:5500" // Allow requests from this origin
+));
 app.use(morgan("dev")); // Use morgan middleware for logging HTTP requests //morgan store url , method , status code and response time in console
 
 // app.use(
