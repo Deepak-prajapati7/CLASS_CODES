@@ -18,7 +18,8 @@ function middleware1(req, res, next) {
 
 function logger(req, res, next) {
   console.log(`${req.method} ${req.url}`);
-  next();
+  next(); 
+   console.log(res.statusCode); // Log the response status code after the response is sent
 }
 
 //app.use(logger); // Apply the logger middleware to all routes
@@ -32,7 +33,7 @@ app.get("/user", middleware1,logger,(req, res) => {
 });
 
 
-app.get('/about', (req, res) => {
+app.get('/about',logger, (req, res) => {
   console.log('This is the about page');
   res.send('This is the about page');
 });
