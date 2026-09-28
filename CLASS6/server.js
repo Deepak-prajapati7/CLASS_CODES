@@ -1,5 +1,7 @@
 import express from "express";
+import morgan from "morgan";
 const app = express();
+app.use(morgan("dev")); // Use morgan middleware for logging HTTP requests
 
 // app.use(
 //   express.static("public"), // to live the index.html file in the public folder
