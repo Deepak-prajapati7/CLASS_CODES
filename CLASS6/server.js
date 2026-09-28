@@ -1,6 +1,8 @@
 import express from "express";
 import morgan from "morgan";
 import cors from "cors"; // allow backend to access frontend data from different origin
+import multer from "multer"; // for file upload
+//import cookieParser from "cookie-parser"; // for cookie parsing
 const app = express();
 app.use(cors(
   //origin: "http://localhost:5500" // Allow requests from this origin
