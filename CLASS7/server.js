@@ -1,6 +1,6 @@
 import express from "express";
 
-const app = express();// Middleware to parse JSON request bodies
+const app = express();
 app.use(express.json());
 
 app.get("/user", (req, res) => {
