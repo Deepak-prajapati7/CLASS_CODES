@@ -37,4 +37,12 @@ db.stiudents.aggregate([
     {
         $match: {
             age: { $gt: 20 }
-        } 
+        }
+    },
+    {
+        $group: {
+            _id: "$age",
+            totalStudents: { $sum: 1 }
+        }
+    }
+])
