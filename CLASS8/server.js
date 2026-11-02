@@ -13,3 +13,9 @@ db.students.aggregate([
     }
   }
 ])
+db.student.aggregate([
+    $%project : {
+        name :1,
+        age:1
+    }
+])
