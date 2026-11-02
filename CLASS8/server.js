@@ -33,3 +33,8 @@ db.student.aggregate([
         }
     }
 ])
+db.stiudents.aggregate([
+    {
+        $match: {
+            age: { $gt: 20 }
+        } 
