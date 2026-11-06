@@ -1,11 +1,12 @@
+import User from "../model/user.js";
 const signin = async (req, res) => {
     try {
         // Extract email and password from request body
-        const { email, password } = req.body;
+        const { name, email, password, role } = req.body;
 
         // Validate input
         if (!email || !password) {
-            return res.status(400).json({ message: "Email and password are required" });
+            return res.status(404).json({ message: "data not found" });
         }
 
         // Check if user exists in the database
