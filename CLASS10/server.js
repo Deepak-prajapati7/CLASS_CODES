@@ -6,3 +6,7 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 connectDB();
+app.use(express.json());
+app.use("/api", (req, res) => {
+  res.send("API is working");
+});
